@@ -1,0 +1,126 @@
+# =========================
+# GIT COMMANDS (Common)
+# =========================
+
+# Initialize Git repository
+git init
+
+# Check files status
+git status
+
+# Add all files
+git add .
+
+# Commit files
+git commit -m "Docker Application"
+
+# Change branch to main
+git branch -M main
+
+# Add GitHub repository
+git remote add origin https://github.com/username/project-name.git
+
+# Push code to GitHub
+git push -u origin main
+
+
+# =========================
+# DOCKER COMMANDS (Common)
+# =========================
+
+# Check Docker version
+docker --version
+
+# Build Docker image
+docker build -t app-name .
+
+# List Docker images
+docker images
+
+# Run Docker container
+docker run app-name
+
+# Run container in background with port
+docker run -d -p 8080:80 app-name
+
+# List running containers
+docker ps
+
+# List all containers
+docker ps -a
+
+# Stop container
+docker stop container_id
+
+# Remove container
+docker rm container_id
+
+# Remove Docker image
+docker rmi image_name
+
+# View container logs
+docker logs container_id
+
+# Pull image from DockerHub
+docker pull username/image-name
+
+# Run DockerHub image
+docker run username/image-name
+
+
+# =========================
+# DOCKERHUB COMMANDS (Common)
+# =========================
+
+# Login to DockerHub
+docker login -u username
+
+# Tag image for DockerHub
+docker tag app-name username/app-name
+
+# Push image to DockerHub
+docker push username/app-name
+
+# Pull image from DockerHub
+docker pull username/app-name
+
+# Logout DockerHub
+docker logout
+
+
+# =========================
+# COMPLETE FLOW (Example)
+# =========================
+
+# 1. Create image
+docker build -t java-app .
+
+# 2. Run image
+docker run java-app
+
+# 3. Login DockerHub
+docker login -u username
+
+# 4. Tag image
+docker tag java-app username/java-app
+
+# 5. Push image
+docker push username/java-app
+
+
+# =========================
+# UBUNTU DOCKER START
+# =========================
+
+sudo apt update
+
+sudo apt install docker.io -y
+
+sudo systemctl start docker
+
+sudo systemctl enable docker
+
+sudo systemctl status docker
+
+# Use docker without sudo
+sudo usermod -aG docker $USER
